@@ -20,6 +20,4 @@ const service = (options = {}) => {
   return vm
 }
 
-Vue.prototype.$dialogService = service
-
 export default service

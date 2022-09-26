@@ -7,6 +7,7 @@ import pkg from './package.json'
 
 const depNames = Object.keys(pkg.dependencies)
 depNames.push('vue')
+depNames.push('element-ui')
 const depNamesReg = new RegExp(`^(${depNames.join('|')})`)
 
 export default defineConfig({
