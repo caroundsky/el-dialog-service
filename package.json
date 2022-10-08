@@ -8,10 +8,13 @@
   "scripts": {
     "serve": "vite",
     "build": "vite build",
+    "build:demo": "vite build --mode demo",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
+    "element-ui": "^2.15.8",
+    "highlight.js": "^11.6.0",
     "less": "^4.0.0",
     "less-loader": "^7.2.1",
     "lodash": "^4.17.21",
@@ -20,9 +23,8 @@
     "vite-plugin-css-injected-by-js": "^1.5.0",
     "vite-plugin-style-import": "^1.4.1",
     "vite-plugin-vue2": "^2.0.0",
-    "vue-template-compiler": "^2.6.14",
-    "element-ui": "^2.15.8",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {},
   "peerDependencies": {
