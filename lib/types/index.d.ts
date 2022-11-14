@@ -10,7 +10,7 @@ type getFooterBtnsFn = (opt: {
 interface BtnConfig extends Partial<ElButton> {
   label: string;
   onClick?: BtnFnConfig;
-};
+}
 
 interface DialogConfig {
   /** 标题 */
@@ -50,9 +50,3 @@ interface vm extends DialogConfig {
 
 declare const service: (options?: DialogConfig) => any;
 export default service;
-
-declare module 'vue/types/vue' {
-  interface Vue {
-    $dialogService: service
-  }
-}
