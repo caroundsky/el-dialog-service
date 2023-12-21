@@ -12,8 +12,7 @@
 
   import drag from './drag'
   
-  import isPlainObject from 'lodash/isPlainObject'
-  import isFunction from 'lodash/isFunction'
+  import { isPlainObject, isFunction } from "./tools";
   
   export default {
     name: 'DialogService',
