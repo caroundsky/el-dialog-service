@@ -39,6 +39,7 @@
         class: '',
         buttons: [],
         showClose: true,
+        modal: true,
         canModalClose: false,
         fullscreen: false,
         fullScreenEnable: true,
@@ -203,6 +204,7 @@
           zIndex={this.zIndex}
           center={this.center}
           showClose={this.showClose}
+          modal={this.modal}
           closeOnClickModal={this.canModalClose}
           closeOnPressEscape={this.canModalClose}
           before-close={this.handleBeforeClose}

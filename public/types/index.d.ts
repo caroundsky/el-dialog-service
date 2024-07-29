@@ -19,11 +19,12 @@ interface DialogConfig {
   height?: string
   /** 高度 */
   top?: string
-  zIndex?: boolean
+  zIndex?: number
   class?: string
   iframeSrc?: string
 
   showClose?: boolean
+  modal?: boolean
   canModalClose?: boolean
   fullscreen?: boolean
   fullScreenEnable?: boolean
