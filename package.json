@@ -1,7 +1,7 @@
 {
   "name": "@caroundsky/el-dialog-service",
   "private": false,
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "typings": "lib/types/index.d.ts",
