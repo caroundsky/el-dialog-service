@@ -98,8 +98,7 @@
           return (
             this.buttons.bind(this, {
               vm: this,
-              component:
-                this.renderContent.componentInstance || this.renderContent,
+              component: () => this.renderContent.componentInstance || this.renderContent,
               getFooterBtns: this.setBtns
             })(this.$createElement) || []
           )
@@ -180,9 +179,10 @@
         )
       }
   
-      this.renderContent = renderContent
-  
       const dialogListeners = {
+        open: () => {
+          this.renderContent = renderContent
+        },
         closed: this.handleCancel,
         opened: this.handleOpen,
         'update:visible': val => (this.visible = val)
@@ -276,8 +276,16 @@
           return btn.bind(this, {
             vm: this,
             ctx: this._buttons,
-            component: this.renderContent.componentInstance || this.renderContent
+            component: () => this.renderContent.componentInstance || this.renderContent
           })(this.$createElement)
+        }
+
+        if (Object.prototype.hasOwnProperty.call(btn, 'render')) {
+          return btn.render({
+            vm: this,
+            ctx: btn,
+            component: () => this.renderContent.componentInstance || this.renderContent,
+          })
         }
   
         const buttonListeners = { click: () => this.handleBtnClick(btn) }

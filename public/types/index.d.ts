@@ -7,6 +7,7 @@ type getFooterBtnsFn = (opt: { vm: vm; getFooterBtns: (component: any) => object
 interface BtnConfig extends Partial<ElButton> {
   label: string
   onClick?: BtnFnConfig
+  render?: any
 }
 
 interface DialogConfig {
